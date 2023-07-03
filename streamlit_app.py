@@ -93,7 +93,7 @@ streamlit.write('Thanks for adding ', fruit_add)
 
 
 #This will not work correctly, but just go with it for now
-my_cur.execute("insert into fruit_load_list values ('from streamlit')")
+# my_cur.execute("insert into fruit_load_list values ('from streamlit')")
 
 
 
