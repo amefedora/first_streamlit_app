@@ -35,6 +35,8 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_c
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # output it the screen as a table
 streamlit.dataframe(fruityvice_normalized)
+# don't run anything past here while we trouble 
+streamlit.stop()
 
 import snowflake.connector
 
@@ -57,5 +59,6 @@ streamlit.write('Thanks for adding ', fruit_add)
 
 #This will not work correctly, but just go with it for now
 my_cur.execute("insert into fruit_load_list values ('from streamlit')")
+
 
 
